@@ -13,33 +13,28 @@
 /*
 ** Terminate execution and display error message
 */
-#include "error_message.h"
 #include "fdf.h"
-#include "libft.h"
-#include <stdio.h>
-#include <errno.h>
 #include <fcntl.h>
 
-void terminate(char *s)
-{
-	if(errno == 0)
-		ft_putendl_fd(s, 2);
-	else
-		perror(s);
-	exit(1);
-}
+
 
 
 int main(int argc, char **argv)
 {
 	int fd;
 	t_map	*map;
+	t_coord_val *coords_stack;
+	t_fdf	*fdf;
+
 	if (argc == 2)
 	{
 		fd = open(argv[1], O_RDONLY);
 		if (fd < 0)
 			terminate(ERR_MAP);
 		map = map_init();
+		if (read_map(fd, &coords_stack, map) == -1)
+			terminate(ERR_MAP_READING);
+		fdf = fdf_init(map);
 
 
 
