@@ -36,12 +36,10 @@ int main(int argc, char **argv)
 			terminate(ERR_MAP_READING);
 		fdf = fdf_init(map);
 		stack_to_arrays(&coords_stack, map);
-
-
-
-
-
-
+		fdf->camera = camera_init(fdf);
+		draw(fdf->map, fdf);
+		setup_controls(fdf);
+		mlx_loop(fdf->mlx);
 	}
 	terminate(ERR_USAGE);
 	return (0);
