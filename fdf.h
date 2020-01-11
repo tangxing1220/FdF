@@ -1,7 +1,19 @@
 #ifndef FDF_H
 # define FDF_H
 
+# define HEIGHT 1080
+# define WIDTH  1920
+# define MENU_WIDTH  250
+
 #include "error_message.h"
+
+
+
+typedef enum
+{
+    false,
+    true
+}   t_bool;
 
 typedef enum
 {
@@ -66,5 +78,10 @@ void terminate(char *s);
 t_map       *map_init(void);
 int         read_map(const int fd, t_coord_val **coords_stack, t_map *map);
 t_fdf       *fdf_init(t_map *map);
+void        stack_to_arrays(t_coord_val **coords_stack, t_map *map);
+t_coord_val     *pop(t_coord_val **coords_stack);
+void            push(t_coord_val **coords_stack, t_coord_val *new);
+t_bool      ft_isnumber(char *str, int base);
+int         ft_atoi_base(const char *str, int base);
 
 #endif

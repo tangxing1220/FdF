@@ -74,8 +74,8 @@ int read_map(const int fd, t_coord_val **coords_stack, t_map *map)
     {
         if(!(coords_line = ft_strsplit(line, ' ')))
             terminate(ERR_MAP_READING);
-        parse_line(coords_line = coords_stack, map);
-        free_strspllit_arr(coords_line);
+        parse_line(coords_line, coords_stack, map);
+        free_strsplit_arr(coords_line);
         ft_strdel(&line);
         map->height++;
     }

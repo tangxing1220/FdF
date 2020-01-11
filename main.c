@@ -35,6 +35,7 @@ int main(int argc, char **argv)
 		if (read_map(fd, &coords_stack, map) == -1)
 			terminate(ERR_MAP_READING);
 		fdf = fdf_init(map);
+		stack_to_arrays(&coords_stack, map);
 
 
 

@@ -6,5 +6,7 @@
 # define ERR_MAP            "Incorrect MAP_FILE"
 # define ERR_MAP_INIT       "Map initialization error"
 # define ERR_MAP_READING    "Reading error"
+# define ERR_CONV_TO_ARR    "Conversion to array"
+# define ERR_FDF_INIT       "FdF initialization error"
 
 #endif
