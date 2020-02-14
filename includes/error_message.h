@@ -1,0 +1,24 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   error_message.h                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: xtang <xtang@student.hive.fi>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/02/03 16:50:37 by xtang             #+#    #+#             */
+/*   Updated: 2020/02/03 16:51:19 by xtang            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#ifndef ERROR_MESSAGE_H
+# define ERROR_MESSAGE_H
+
+# define ERR_USAGE			"Usage: ./fdf MAP_FILE"
+# define ERR_MAP			"Incorrect MAP_FILE"
+# define ERR_MAP_READING	"Reading error"
+# define ERR_MAP_INIT		"Map initialization error"
+# define ERR_FDF_INIT		"FdF initialization error"
+# define ERR_CONV_TO_ARR	"Conversion to array"
+# define ERR_CAMERA_INIT	"Camera initialization error"
+
+#endif
